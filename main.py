@@ -1,5 +1,6 @@
 import streamlit as st
 import multiple_pages.Data_Ingestion
+import multiple_pages.LLM_Chat
 
 # Set the page configuration
 st.set_page_config(
@@ -12,8 +13,8 @@ st.set_page_config(
 def intro():
     import streamlit as st
 
-    st.write("# Welcome to Streamlit! 👋")
-    st.sidebar.success("Select a demo above.")
+    st.write("# Welcome to Area51 👋")
+    st.sidebar.success("Select a Module above.")
 
     st.markdown(
         """
@@ -35,26 +36,29 @@ def intro():
         - Use a neural net to [analyze the Udacity Self-driving Car Image
           Dataset](https://github.com/streamlit/demo-self-driving)
         - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
+        """
     )
 
 
 def Data_Ingestion():
     multiple_pages.Data_Ingestion.app()
 
+def LLM_Chat():
+    multiple_pages.LLM_Chat.app()
+
 page_names_to_funcs = {
     "—": intro,
-    "Data Ingestion": Data_Ingestion
-    # "Mapping Demo": mapping_demo,
+    "Data Ingestion": Data_Ingestion,
+    "LLM Chat": LLM_Chat
     # "DataFrame Demo": data_frame_demo
 }
 
 
 # Add an image in sidebar that is alligned in center
-st.sidebar.image("asset/Area.png", use_container_width=True, caption="")
+st.sidebar.image("static/Area.png", use_container_width=True, caption="")
 
 # Add Sidebar
-demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
+demo_name = st.sidebar.selectbox("Choose a Module", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()
 
 
