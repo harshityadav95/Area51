@@ -162,3 +162,8 @@ cython_debug/
 #.idea/
 .vscode/settings.json
 .streamlit/secrets.toml
+
+
+## Add folder name secrets to .gitignore
+secrets/
+

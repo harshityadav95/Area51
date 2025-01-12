@@ -85,9 +85,4 @@ podman build -t streamlit starter -f Dockerfile .
 - https://docs.streamlit.io/deploy/tutorials/docker
 - https://hackmd.io/@maelvls/fixing-403-forbidden-ghcr
 - https://www.propelauth.com/post/streamlit-authentication
-
-
-
-
-
-
+- https://github.com/mkhorasani/Streamlit-Authenticator?ref=blog.streamlit.io

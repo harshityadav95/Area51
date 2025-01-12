@@ -1,1 +1,3 @@
 Streamlit
+streamlit-authenticator
+azure-storage-blob
