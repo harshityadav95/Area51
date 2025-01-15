@@ -1,3 +1,4 @@
 Streamlit
 streamlit-authenticator
 azure-storage-blob
+google-generativeai

@@ -61,6 +61,15 @@ $ streamlit run main.py --port 8501
 
 ```
 
+## Setting up Environment variables
+```
+[azure.storage]
+area51databank="KEY"
+
+
+[google.gemini]
+gemini_key="KEY"
+```
 ## Docker Build Locally
 
 ```
